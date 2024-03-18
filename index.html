@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VideoAgent">
+  <meta name="keywords" content="VideoAgent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .center {
+    display: block;
+        margin: auto;
+    }
+    </style>
+
+  <style>
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .video-container iframe {
+        max-width: 90%; /* 调整iframe的宽度，以适应屏幕 */
+        box-sizing: border-box;
+    }
+</style>
+  <title>VideoAgent</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">VideoAgent: A Memory-augmented Multimodal Agent for Video Understanding</h1>
+          <h1 class="title is-4 publication-title">ECCV 2024</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Yue Fan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://jeasinema.github.io/">Xiaojian Ma</a><sup>1&#x1f4e7;</sup>,</span>
+            <span class="author-block">
+              <a href="https://joyjayng.github.io/">Rujie Wu</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://yuntaodu.github.io/">Yuntao Du</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Jiaqi Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhigao2017.github.io/">Zhi Gao</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://liqing-ustc.github.io/">Qing Li</a><sup>1&#x1f4e7;</sup></span>                                                                                  
+          </div>
+
+
+
+          <div class="is-size-5 publication-authors">
+            
+            <span class="author-block"><sup>1</sup>National Key Laboratory of General Artificial Intelligence,
+              Beijing Institute for General Artificial Intelligence (BIGAI)</span>
+            <span class="author-block"><sup>2</sup>School of Computer Science, Peking University</span>
+            <span class="author-block"><sup>3</sup>School of Intelligence Science and Technology, Peking University</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.10908"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+
+
+          <br>
+          <img width="95%" src="file/main/boats.png">
+          <br>
+          <figcaption style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">Figure 1. With a unified memory as a structured representation for videos, VideoAgent can utilize a curated set of tools to perform sophisticated queries about the memory, and respond with the correct answer.</figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We explore how reconciling several foundation models (large language models and vision-language models) with a novel unified memory mechanism could tackle the challenging video understanding problem, especially capturing the long-term temporal relations in lengthy videos. In particular, the proposed multimodal agent VideoAgent: 1) constructs a structured memory to store both the generic temporal event descriptions and object-centric tracking states of the video; 2) given an input task query, it employs tools including video segment localization and object memory querying along with other visual foundation models to interactively solve the task, utilizing the zero-shot tool-use ability of LLMs. VideoAgent demonstrates impressive performances on several long-horizon video understanding benchmarks, an average increase of 6.6% on NExT-QA and 26.0% on EgoSchema over baselines, closing the gap between open-sourced models and private counterparts including Gemini 1.5 Pro. The code will be released to the public.
+          </p>
+
+    </div>
+
+    <h2 class="subtitle has-text-justified">
+      <b>TL;DR:</b> We propose VideoAgent, a LLM agent that understands videos by using a strutured memory and 4 tools. 
+    </h2>
+    <img width="95%" src="file/main/teaser.png">
+    <br>
+    <figcaption style="font-size: 18px;font-family: 'Times New Roman', Times, serif;" align="left">Figure 2. An overview of VideoAgent. Left: We first translate an input video into structured representations: a temporal memory and an object memory; Right: the LLM within VideoAgent will be prompted to solve the given task by interactively invoking tools. Our considered tools primarily work with the memory (e.g. Caption Retrieval interacts with the caption part of the temporal memory while Object Memory Querying looks up the object memory).</figcaption>
+</section>
+
+
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given a video and a question, VideoAgent has two phases: memory construction phase and inference phase. During the memory construction phase, structured information is extracted from the video and stored in the memory. During the inference phase, a LLM is prompted to use a set of tools interacting with the memory to answer the question.
+          </p>
+
+    </div>
+
+    <h2 class="subtitle has-text-justified"></h2>
+      <b>Memory Construction</b>
+      <div class="content has-text-justified">
+      <p>
+      VideoAgent has a temporal memory and an object memory. 
+      By slicing the video into 2-second segments, the temporal memory is designed to store the event descriptions of these segments generated by a video captioning model. Besides, the textual features and visual features of these segments are also stored in the temporal memory for similarity-based segment localization in the inference stage.
+      The object memory stores all the objects with their information in a SQL database including: categories, CLIP features, and their appearing segments. The object information is achieved by object tracking with a unique re-identfication method proposed in this paper.
+      </p>
+      </div>
+    <img src="file/main/reid.gif" loop="true" autoplay="true" class="center">
+    <br>
+    <figcaption style="font-size: 18px;font-family: 'Times New Roman', Times, serif;" align="center">Figure 3. Illustration of object tracking with our re-identification method. </figcaption>
+
+
+
+    <h2 class="subtitle has-text-justified"></h2>
+      <b>Inference</b> 
+      <div class="content has-text-justified">
+      <p>
+        During the inference stage, 4 tools can be utilized by the LLM to gather video information required to answer the question. The 4 tools are:
+        <ul>
+          <li><b>Caption Retrieval</b>: given a start segment and an end segment, retrieve all the captions (15 captions at most) of the segments between them from the temporal memory. </li>
+          <li><b>Segment Localization</b>: given a text query, locate the relevant segments according to the similarities between the query feature and the segment features stored in the temporal memory. </li>
+          <li><b>Visual Question Answering</b>: given a question and a target video segment, it will use a video LLM to describe what happened in this short video segment and answer the question.</li>
+          <li><b>Object Memory Querying</b>: given an object(person)-related question, it will retrieve the information from the object memory to answer the question.</li>
+        </ul>
+      </p>
+      <p>
+        The LLM agent will perform multiple steps towards the final answer. In each step, it will invoke a tool to gather information based on its reasoning and the results of the preivous steps.
+        An example can be found as follows.
+      </p>  
+  </div>
+    <br>
+    <img width="95%" src="file/main/cooking.png" class="center">
+    <figcaption style="font-size: 18px;font-family: 'Times New Roman', Times, serif;" align="center">Figure 4. 
+      Given a question, VideoAgent executes multiple tool-use steps until it reaches the answer. The yellow, red, and blue blocks in each step denote the chain of thought, action to be taken, and results of tool use.</figcaption>
+
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Video Demo</h2>
+        <div class="content has-text-justified">
+    </div>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <iframe width="900" height="510"
+           src="file/demo_all_12.16.mp4">
+        </iframe>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+</body>
+</html>
